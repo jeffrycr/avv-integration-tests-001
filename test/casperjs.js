@@ -9,8 +9,9 @@ casper.start('http://www.google.com/', function () {
 });
 
 casper.then(function () {
-     //test.assertSelectorHasText('.f cite','news.yahoo.com/us/');
+      test.assertSelectorHasText('.f cite','news.yahoo.com/us/');
 	  var links = document.querySelectorAll('.f cite');
+	     this.echo(this.fetchText('.f cite'));
 	  this.echo(links);
 });
 
