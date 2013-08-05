@@ -16,8 +16,7 @@ casper.start('http://www.google.com/', function () {
 });
 
 casper.then(function () {
-    links = this.evaluate(getLinks);
-    //this.test.assertUrlMatch(/news.yahoo.com/, 'search term has been submitted');
+    assertSelectorHasText('.f cite','news.yahoo.com/');
     this.echo(links);
 });
 
