@@ -3,6 +3,7 @@ var casper = require('casper').create();
 function getLinks() {
     var links = document.querySelectorAll('.f .kv cite');
     return Array.prototype.map.call(links, function(e) {
+	  this.echo(e.getElementsInfo('text'));
         return e.getElementsInfo('text');
     });
 }
