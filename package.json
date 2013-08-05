@@ -1,20 +1,20 @@
 {
-    "name": "arrow-results-scoreboard",
-    "description": "Writes Arrow results to ymon scoreboards. It listens to requests from arrow-results Screwdriver custom compiler.",
+    "name": "avv-integration-tests-001",
+    "description": "",
     "version": "0.0.1",
-    "author": "Mauricio Munoz <mmunoz@yahoo-inc.com>",
+    "author": "Mauricio Munoz ",
     "contributors": [
         {
             "name": "Mauricio Munoz",
-            "email": "mmunoz@yahoo-inc.com"
+            "email": "email.com"
         },
         {
             "name": "Jeffry Araya",
-            "email": "jaraya@yahoo-inc.com"
+            "email": "jeffrycr@gmail.com"
         },
         {
             "name": "Andres Ramirez",
-            "email": "andresr@yahoo-inc.com"
+            "email": "andres01cr@gmail.com"
         }
     ],
     "dependencies": {
@@ -28,11 +28,6 @@
         "node": ">=0.6",
         "npm": ">=1.0"
     },
-    "main": "index.js",
-    "yahoo" : {
-        "bugzilla": {
-            "product": "Custom Branded Experiences",
-            "component": "General"
-        }
-    }
+    "main": "index.js"
+
 }
