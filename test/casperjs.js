@@ -1,7 +1,7 @@
 var casper = require('casper').create();
 
 function getLinks() {
-    var links = document.querySelectorAll('.f .kv cite');
+    var links = document.querySelectorAll('.f cite');
     return Array.prototype.map.call(links, function(e) {
 	   echo(require('utils').dump(e.getElementsInfo()));
         return e.getElementsInfo();
