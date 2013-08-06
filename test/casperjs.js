@@ -5,10 +5,10 @@ casper.start('http://www.google.com/', function () {
     this.fill('form[action="/search"]', {
         q: 'us news'
     }, true);
-	var cites = document.querySelectorAll('.f cite').textContent,
+	var cites = document.querySelectorAll('.f cite'),
 		found = false;
 	for (i = 0; i < cites.length && !found; i++) {
-	  if (cites[i] === "news.yahoo.com/us/") {
+	  if (cites[i].textContent === "news.yahoo.com/us/") {
 		found = true;
 	  }
 	}
