@@ -8,7 +8,7 @@ casper.start('http://www.google.com/', function () {
 	var cites = document.querySelectorAll('.f cite'),
 		found = false;
 	for (i = 0; i < cites.length && !found; i++) {
-	  this.echo(cites[i].textContent);
+	  casper.echo(cites[i].textContent);
 	  if (cites[i].textContent === "news.yahoo.com/us/") {
 		found = true;
 	  }
