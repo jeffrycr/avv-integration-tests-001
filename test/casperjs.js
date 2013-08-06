@@ -13,8 +13,6 @@ casper.start('http://www.google.com/', function () {
 	  }
 	}
 	this.test.assert(found, 'Found Yahoo News');  
-}
-	   
 });
 
 casper.run(function () {
