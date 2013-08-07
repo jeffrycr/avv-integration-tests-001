@@ -3,10 +3,12 @@ module.exports = function (grunt) {
   // Project configuration.
     grunt.initConfig({
         // Configuration to be run (and then tested).
-        casperjs: {
-            files: ['test/**/*.js']
+        ghost: {
+        	integration: {
+        		filesSrc: ['integration-test/**/*.js']
+        	}
         }
     });
-    grunt.loadNpmTasks('grunt-casperjs');
-    grunt.registerTask('test', ['casperjs']);
+    grunt.loadNpmTasks('grunt-ghost');
+    grunt.registerTask('test', ['ghost']);
 };
