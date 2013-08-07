@@ -23,5 +23,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ghost');
     grunt.loadNpmTasks('grunt-karma');
     grunt.registerTask('test', ['ghost']);
-    grunt.registerTask('test', ['karma:unit']);
+    //grunt.registerTask('test', ['karma:unit']);
 };
