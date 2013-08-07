@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         // Configuration to be run (and then tested).
         casperjs: {
-            files: ['test/casperjs.js']
+            files: ['test/**/*.js']
         }
     });
     grunt.loadNpmTasks('grunt-casperjs');
