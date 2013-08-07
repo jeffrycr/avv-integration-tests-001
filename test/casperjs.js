@@ -14,7 +14,8 @@ casper.start('http://www.google.com/', function () {
 		found = true;
 	  }
 	}
-	this.test.assert(found, 'Found Yahoo News');  
+	this.echo(found);
+	this.test.assertNot(found, 'Found Yahoo News');  
 });
 
 casper.run(function () {
