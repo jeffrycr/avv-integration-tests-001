@@ -1,10 +1,22 @@
 var casper = require('casper').create();
 
-casper.start('http://www.google.com/', function () {
-    this.test.assertExists('form[action="/search"]', 'main form is found');
-    this.fill('form[action="/search"]', {
-        q: 'us news'
-    }, true);
+casper.test.begin('Verify Yahoo! News in Google results for "us news"', function suite(test) {
+    casper.start('http://www.google.com/', function () {
+    	test.assertExists('form[action="/search"]', 'main form is found');
+    	this.fill('form[action="/search"]', {
+            q: 'us news'
+    	}, true);
+    });
+    casper.then(function () {
+    	test.assertExists('ol#rso');
+    });
+    casper.run(function () {
+    	test.done();
+    });
+});
+
+    
+/*
 });
 casper.then(function() {
 var cites = document.querySelectorAll('.f cite'),
@@ -22,4 +34,4 @@ var cites = document.querySelectorAll('.f cite'),
 });
 casper.run(function () {
     this.test.renderResults(true);
-});
+});*/
