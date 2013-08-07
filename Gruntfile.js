@@ -2,8 +2,8 @@
 module.exports = function (grunt) {
   // Project configuration.
 
-    var browser = 'PhantomJS';
-    //var browser = 'Chrome';
+    //var browser = 'PhantomJS';
+    var browser = 'Chrome';
 
     grunt.initConfig({
         // Configuration to be run (and then tested).
@@ -14,39 +14,61 @@ module.exports = function (grunt) {
         },
         karma: {
             options: {
+                logLevel: 'LOG_DEBUG',
                 browsers: [browser],
                 singleRun: true,
                 autoWatch: false,
                 reporters : ['coverage'],
                 preprocessors: {
-                    'src/pow.js': ['coverage']
+                    'src/*.js': ['coverage']
                 },
                 coverageReporter: {
                     type : 'html',
                     dir : 'coverage/',
-                    file : 'coverage.txt'
+                    file : 'coverage.html'
                 }
             },
             'unit-jasmine': {
                 options: {
                     frameworks: ['jasmine'],
-                    files: [ 'src/*.js', 'unit-test/jasmine/*.js']
+                    files: [
+                        'node_modules/underscore/underscore.js',
+                        'src/*.js',
+                        'unit-test/jasmine/*.js'
+                    ],
+                    coverageReporter: {
+                        type : 'html',
+                        dir : 'coverage/unit/jasmine'
+                    }
                 }
             },
             'unit-mocha': {
                 options: {
                     frameworks: ['mocha'],
                     files: [
+                        'node_modules/underscore/underscore.js',
                         'node_modules/chai/chai.js',
                         'src/*.js',
                         'unit-test/mocha/*.js'
-                    ]
+                    ],
+                    coverageReporter: {
+                        type : 'html',
+                        dir : 'coverage/unit/mocha'
+                    }
                 }
             },
             'unit-qunit': {
                 options: {
                     frameworks: ['qunit'],
-                    files: ['src/*.js', 'unit-test/qunit/*.js']
+                    files: [
+                        'node_modules/underscore/underscore.js',
+                        'src/*.js',
+                        'unit-test/qunit/*.js'
+                    ],
+                    coverageReporter: {
+                        type : 'html',
+                        dir : 'coverage/unit/qunit'
+                    }
                 }
             }
         }

@@ -1,5 +1,6 @@
 /*global _ */
-/*exported dataTransform */
+/*exported dataTransform*/
+
 function dataTransform(data) {
     'use strict';
     var result;
