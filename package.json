@@ -12,6 +12,10 @@
     "devDependencies": {
         "grunt": "0.4.1",
         "grunt-ghost": "1.0.13",
-        "grunt-karma": "0.6.1"
+        "grunt-karma": "0.6.1",
+        "karma": "0.10.1",
+        "karma-mocha": "0.1",
+        "karma-jasmine": "0.1",
+        "karma-qunit": "0.1"
     }
 }
