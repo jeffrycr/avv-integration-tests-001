@@ -10,12 +10,22 @@ module.exports = function (grunt) {
         },
         karma: {
             options: {
-                frameworks: ['jasmine', 'mocha', 'qunit'],
-                files: ['src/*.js', 'unit-test/**/*.js'],
                 runnerPort: 9999,
                 browsers: ['PhantomJS']
             },
             unit: {
+                jasmine: {
+                    frameworks: ['jasmine'],
+                    files: ['src/*.js', 'unit-test/jasmine/*.js']
+                },
+                mocha: {
+                    frameworks: ['mocha'],
+                    files: ['src/*.js', 'unit-test/mocha/*.js']
+                },
+                qunit: {
+                    frameworks: ['qunit'],
+                    files: ['src/*.js', 'unit-test/qunit/*.js']
+                },
                 singleRun: true
             }
         }
@@ -23,5 +33,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ghost');
     grunt.loadNpmTasks('grunt-karma');
     grunt.registerTask('test', ['ghost']);
-    //grunt.registerTask('test', ['karma:unit']);
+    grunt.registerTask('test', ['karma']);
 };
