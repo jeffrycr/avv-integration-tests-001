@@ -10,12 +10,12 @@ casper.start('http://www.google.com/', function () {
 	this.echo(this.fetchText('.f cite'));
 	for (i = 0; i < cites.length && !found; i++) {
 	
-	  if (cites[i].textContent === "news.yahoo.com/us/") {
+	  if (cites[i].textContent == "news.yahoo.com/us/") {
 		found = true;
 	  }
 	}
 	this.echo(found);
-	this.test.assertNot(found, 'Found Yahoo News');  
+	this.test.assert(found, 'Found Yahoo News');  
 });
 
 casper.run(function () {
