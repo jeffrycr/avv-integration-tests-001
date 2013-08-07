@@ -1,4 +1,3 @@
-/*globals JASMINE, JASMINE_ADAPTER, MOCHA, MOCHA_ADAPTER, QUNIT, QUNIT_ADAPTER,*/
 'use strict';
 module.exports = function (grunt) {
   // Project configuration.
@@ -11,14 +10,8 @@ module.exports = function (grunt) {
         },
         karma: {
             options: {
-                files: [
-                    JASMINE,
-                    JASMINE_ADAPTER,
-                    MOCHA,
-                    MOCHA_ADAPTER,
-                    QUNIT,
-                    QUNIT_ADAPTER
-                ],
+                frameworks: ['jasmine', 'mocha', 'qunit'],
+                files: ['src/*.js', 'unit-test/**/*.js'],
                 runnerPort: 9999,
                 browsers: ['PhantomJS']
             },
