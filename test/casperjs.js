@@ -10,7 +10,7 @@ casper.then(function() {
 var cites = document.querySelectorAll('.f cite'),
 		found = false,
 		i;
-	
+	this.echo(cites);
 	for (i = 0; i < cites.length && !found; i += 1) {
 	this.echo(cites[i].textContent);
 	  if (cites[i].textContent === "news.yahoo.com/us/") {
