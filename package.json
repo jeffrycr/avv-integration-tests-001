@@ -11,6 +11,7 @@
     },
     "devDependencies": {
         "grunt": "0.4.1",
-        "grunt-ghost": "1.0.13"
+        "grunt-ghost": "1.0.13",
+        "grunt-karma": "0.6.1"
     }
 }
