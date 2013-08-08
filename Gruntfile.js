@@ -1,6 +1,10 @@
 'use strict';
 module.exports = function (grunt) {
   // Project configuration.
+
+  var browser = 'PhantomJS';
+  //var browser = 'Chrome';
+
     grunt.initConfig({
         // Configuration to be run (and then tested).
         ghost: {
@@ -10,28 +14,35 @@ module.exports = function (grunt) {
         },
         karma: {
             options: {
-                runnerPort: 9999,
-                browsers: ['PhantomJS']
+                browsers: ['Chrome'],
+                singleRun: true,
+                autoWatch: false
             },
-            unit: {
-                jasmine: {
+            'unit-jasmine': {
+                options: {
                     frameworks: ['jasmine'],
                     files: ['src/*.js', 'unit-test/jasmine/*.js']
-                },
-                mocha: {
+                }
+            },
+            'unit-mocha': {
+                options: {
                     frameworks: ['mocha'],
-                    files: ['src/*.js', 'unit-test/mocha/*.js']
-                },
-                qunit: {
+                    files: [
+                        'node_modules/chai/chai.js',
+                        'src/*.js',
+                        'unit-test/mocha/*.js'
+                    ]
+                }
+            },
+            'unit-qunit': {
+                options: {
                     frameworks: ['qunit'],
                     files: ['src/*.js', 'unit-test/qunit/*.js']
-                },
-                singleRun: true
+                }
             }
         }
     });
     grunt.loadNpmTasks('grunt-ghost');
     grunt.loadNpmTasks('grunt-karma');
-    grunt.registerTask('test', ['ghost']);
-    grunt.registerTask('test', ['karma']);
+    grunt.registerTask('test', ['karma:unit-mocha', 'ghost']);
 };
