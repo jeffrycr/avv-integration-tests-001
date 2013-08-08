@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         },
         karma: {
             options: {
-                browsers: ['Chrome'],
+                browsers: [browser],
                 singleRun: true,
                 autoWatch: false
             },
