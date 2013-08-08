@@ -2,8 +2,8 @@
 module.exports = function (grunt) {
   // Project configuration.
 
-  var browser = 'PhantomJS';
-  //var browser = 'Chrome';
+   //var browser = 'PhantomJS';
+  var browser = 'Chrome';
 
     grunt.initConfig({
         // Configuration to be run (and then tested).
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
             'unit-jasmine': {
                 options: {
                     frameworks: ['jasmine'],
-                    files: ['src/*.js', 'unit-test/jasmine/*.js']
+                    files: [ 'src/*.js', 'unit-test/jasmine/*.js']
                 }
             },
             'unit-mocha': {
@@ -44,5 +44,5 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-ghost');
     grunt.loadNpmTasks('grunt-karma');
-    grunt.registerTask('test', ['karma:unit-mocha', 'ghost']);
+    grunt.registerTask('test', ['karma', 'ghost']);
 };
