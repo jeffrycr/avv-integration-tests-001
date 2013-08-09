@@ -17,6 +17,8 @@
         "karma-mocha": "0.1",
         "karma-jasmine": "0.1",
         "karma-qunit": "0.1",
-        "chai": "1.7.2"
+        "chai": "1.7.2",
+        "karma-coverage": "~0.1",
+        "underscore": "1.4.4"
     }
 }

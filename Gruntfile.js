@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   // Project configuration.
 
     var browser = 'PhantomJS';
-  //var browser = 'Chrome';
+    //var browser = 'Chrome';
 
     grunt.initConfig({
         // Configuration to be run (and then tested).
@@ -16,7 +16,16 @@ module.exports = function (grunt) {
             options: {
                 browsers: [browser],
                 singleRun: true,
-                autoWatch: false
+                autoWatch: false,
+                reporters : ['coverage'],
+                preprocessors: {
+                    'src/pow.js': ['coverage']
+                },
+                coverageReporter: {
+                    type : 'html',
+                    dir : 'coverage/',
+                    file : 'coverage.txt'
+                }
             },
             'unit-jasmine': {
                 options: {
