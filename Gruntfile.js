@@ -2,8 +2,8 @@
 module.exports = function (grunt) {
   // Project configuration.
 
-    //var browser = 'PhantomJS';
-    var browser = 'Chrome';
+    var browser = 'PhantomJS';
+    //var browser = 'Chrome';
 
     grunt.initConfig({
         // Configuration to be run (and then tested).
