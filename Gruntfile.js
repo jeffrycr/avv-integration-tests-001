@@ -2,8 +2,8 @@
 module.exports = function (grunt) {
   // Project configuration.
 
-    var browser = 'PhantomJS';
-    //var browser = 'Chrome';
+    //var browser = 'PhantomJS';
+    var browser = 'Chrome';
 
     grunt.initConfig({
         // Configuration to be run (and then tested).
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                         'unit-test/mocha/*.js'
                     ],
                     coverageReporter: {
-                        type : 'html',
+                        type : 'lcov',
                         dir : 'coverage/unit/mocha'
                     }
                 }

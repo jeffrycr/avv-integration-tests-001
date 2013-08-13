@@ -7,7 +7,8 @@
         "node": ">= 0.10.0"
     },
     "scripts": {
-        "test": "grunt test"
+        "test": "grunt test",
+        "coveralls": "node bin/coveralls.js < coverage/unit/mocha/*/lcov.info"
     },
     "devDependencies": {
         "grunt": "0.4.1",
@@ -19,6 +20,7 @@
         "karma-qunit": "0.1",
         "chai": "1.7.2",
         "karma-coverage": "~0.1",
+        "coveralls": "2.1.0",
         "underscore": "1.5.1"
     }
 }
