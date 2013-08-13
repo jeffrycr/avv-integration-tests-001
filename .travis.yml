@@ -11,7 +11,7 @@ before_install:
 before_script:
   - phantomjs --version
   - casperjs --version
-after_script:
+after_success:
   - npm run coveralls
   - ls
   - ls coverage/
