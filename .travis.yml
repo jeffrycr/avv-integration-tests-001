@@ -15,5 +15,4 @@ after_success:
   - npm run coveralls
   - ls
   - ls coverage/
-  - ls coverage/unit/
-  - cat mocha/*/lcov.info
+  - ls coverage/unit/mocha/
