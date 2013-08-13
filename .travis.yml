@@ -16,4 +16,3 @@ after_success:
   - ls
   - ls coverage/
   - ls coverage/unit/mocha/
-  - ls coverage/unit/mocha/PhantomJS\ 1.9.1\ (Linux)/
