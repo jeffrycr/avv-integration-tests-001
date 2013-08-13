@@ -16,4 +16,4 @@ after_script:
   - ls
   - ls coverage/
   - ls coverage/unit/
-  - ls coverage/unit/mocha
+  - cat mocha/*/lcov.info
