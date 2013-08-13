@@ -8,7 +8,7 @@
     },
     "scripts": {
         "test": "grunt test",
-        "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/unit/mocha/PhantomJS\\ 1.9.1\\ (Linux)/lcov.info"
+        "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/unit/mocha/PhantomJS\\ 1.9.1\\ \\(Linux\\)/lcov.info"
     },
     "devDependencies": {
         "grunt": "0.4.1",
