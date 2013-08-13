@@ -3,6 +3,7 @@ module.exports = function (grunt) {
   // Project configuration.
 
     var browser = 'PhantomJS';
+    
     //var browser = 'Chrome';
 
     grunt.initConfig({
