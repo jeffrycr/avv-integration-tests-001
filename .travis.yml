@@ -13,3 +13,7 @@ before_script:
   - casperjs --version
 after_script:
   - npm run coveralls
+  - ls
+  - ls coverage/
+  - ls coverage/unit/
+  - ls coverage/unit/mocha
