@@ -1,9 +1,7 @@
 'use strict';
 module.exports = function (grunt) {
   // Project configuration.
-
     var browser = 'PhantomJS';
-    
     //var browser = 'Chrome';
 
     grunt.initConfig({
@@ -16,6 +14,7 @@ module.exports = function (grunt) {
         karma: {
             options: {
                 browsers: [browser],
+                logLevel: "LOG_DEBUG",
                 singleRun: true,
                 autoWatch: false,
                 reporters : ['coverage'],
@@ -47,6 +46,7 @@ module.exports = function (grunt) {
                     frameworks: ['mocha'],
                     files: [
                         'node_modules/underscore/underscore.js',
+                        'src/libs/sinon.js',
                         'node_modules/chai/chai.js',
                         'src/*.js',
                         'unit-test/mocha/*.js'

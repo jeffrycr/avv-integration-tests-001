@@ -21,6 +21,7 @@
         "chai": "1.7.2",
         "karma-coverage": "~0.1",
         "coveralls": "2.1.0",
-        "underscore": "1.5.1"
+        "underscore": "1.5.1",
+        "sinon":"1.7.3"
     }
 }
